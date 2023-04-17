@@ -32,7 +32,7 @@ public class SSC {
 
     public SSC() {
         try {
-            properties.load(new FileInputStream(new File("C:\\Users\\Administrador\\Desktop\\env.properties")));
+            properties.load(new FileInputStream(new File("C:\\WebInspectAutomatization\\env.properties")));
         } catch (IOException ex) {
             Logger.getLogger(SSC.class.getName()).log(Level.SEVERE, null, ex);
         }
