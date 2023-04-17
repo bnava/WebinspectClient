@@ -8,6 +8,7 @@ package com.microfocus.wiclient.util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  *
@@ -17,6 +18,7 @@ public class ProcessCommand {
     public String  executeComand(String [] cmd, String validation){
         String arg = "";
         StringBuilder sb = new StringBuilder();
+        System.out.println(Arrays.toString(cmd));
         try {
             final Process childProcess = new ProcessBuilder().command(cmd).start();
             try (final BufferedReader br = new BufferedReader(new InputStreamReader(childProcess.getInputStream()))) {
