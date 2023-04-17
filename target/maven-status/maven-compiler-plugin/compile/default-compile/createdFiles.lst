@@ -1,0 +1,6 @@
+com\microfocus\wiclient\util\ProcessCommand.class
+com\microfocus\wiclient\DatosUtil.class
+com\microfocus\wiclient\service\Report.class
+com\microfocus\wiclient\WiClient.class
+com\microfocus\wiclient\service\SSC.class
+com\microfocus\wiclient\service\Scan.class
