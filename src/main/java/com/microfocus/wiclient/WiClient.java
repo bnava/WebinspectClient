@@ -48,6 +48,7 @@ public class WiClient {
             ssc.uploadFpr(reponame, branch, scanid);
         }
         ssc.logoutSSC();
+        rp.cleanDirectory(scanid);
         }
     }
 

@@ -8,6 +8,7 @@ package com.microfocus.wiclient.service;
 import com.microfocus.wiclient.DatosUtil;
 import com.microfocus.wiclient.util.ProcessCommand;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -24,6 +25,13 @@ public class Report {
         DatosUtil dt = new DatosUtil();
         ProcessCommand process = new ProcessCommand();
         process.executeComand(cmd, dt.ExportFPR);
+    }
+    
+    public void cleanDirectory(String scanid){
+        String ruta = "C:\\WebInspectAutomatization\\ReportesFPR\\" + scanid + ".fpr";
+        File fpr = new File(ruta);
+        fpr.delete();
+        
     }
 
     public void generateReportPDF(String scanid) {
