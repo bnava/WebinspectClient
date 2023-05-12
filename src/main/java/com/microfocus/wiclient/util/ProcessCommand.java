@@ -29,8 +29,10 @@ public class ProcessCommand {
                     //sb.append(line).append(System.lineSeparator());
                     System.out.println(line);
                     if (line.contains(validation)) {
-                         if (line.contains("Scan ID:")) 
+                         if (line.contains("Scan ID:")){ 
                         arg = line.split(":")[1].replaceAll(" ", "");
+                        return arg;
+                         }
                         else
                         arg = validation;
                     }

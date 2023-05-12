@@ -42,4 +42,30 @@ public class Scan {
 //        }
 //        return scanid;
     }
+    
+    public void Validascan(String[] args) {
+        String scanid="";
+        DatosUtil dt = new DatosUtil();
+        ProcessCommand process = new ProcessCommand();
+        boolean validation=true;
+           while(validation){
+        try {
+            final Process childProcess = new ProcessBuilder().command(args).start();
+            try (final BufferedReader br = new BufferedReader(new InputStreamReader(childProcess.getInputStream()))) {
+                StringBuilder sb = new StringBuilder();
+                String line;
+
+                    while ((line = br.readLine()) != null) {
+                        if (line.contains("PROCESS_COMPLETE")) {
+                            validation = false;
+                            System.out.println(line);
+                        }
+                    }
+                System.out.println(sb.toString());
+            }
+        } catch (IOException ioe) {
+            System.out.println(ioe);
+        }
+    }
+    }
 }
