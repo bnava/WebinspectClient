@@ -253,8 +253,8 @@ public class SSC {
             cmd[i] = cmd[i].replace("  ", " ");
         }
 
-        cmd[10] = properties.getProperty("FORTIFY_SSC_USERNAME");
-        cmd[12] = properties.getProperty("FORTIFY_SSC_PASSWORD");
+        //cmd[10] = properties.getProperty("FORTIFY_SSC_USERNAME");
+        //cmd[12] = properties.getProperty("FORTIFY_SSC_PASSWORD");
         System.out.println(Arrays.toString(cmd));
         StringBuilder sb = new StringBuilder();
         try {
