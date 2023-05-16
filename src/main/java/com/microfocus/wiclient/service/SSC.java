@@ -91,8 +91,8 @@ public class SSC {
         }
 
         cmd[10] = properties.getProperty("FORTIFY_SSC_URL");
-        cmd[12] = properties.getProperty("FORTIFY_SSC_USERNAME");
-        cmd[14] = properties.getProperty("FORTIFY_SSC_PASSWORD");
+        cmd[12] = properties.getProperty("FORTIFY_TOKEN");
+        //cmd[14] = properties.getProperty("FORTIFY_SSC_PASSWORD");
         System.out.println(Arrays.toString(cmd));
         String validation ="";
         boolean fallo=true;
