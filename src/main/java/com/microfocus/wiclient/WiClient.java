@@ -38,6 +38,7 @@ public class WiClient {
         Report rp = new Report();
         System.out.println("Inicia escaneo");
         String scanid = sc.scan(args);
+        
         rp.generateReportFpr(scanid);
         SSC ssc = new SSC();
         if(ssc.authSSC()){

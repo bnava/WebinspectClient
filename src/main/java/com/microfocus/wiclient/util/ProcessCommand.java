@@ -31,12 +31,13 @@ public class ProcessCommand {
                     if (line.contains(validation)) {
                          if (line.contains("Scan ID:")){ 
                         arg = line.split(":")[1].replaceAll(" ", "");
-                        return arg;
+                             System.out.println(arg);
                          }
                         else
                         arg = validation;
                     }
                 }
+                System.out.println("");
             }
             //System.out.println(sb.toString());
         } catch (IOException ioe) {
